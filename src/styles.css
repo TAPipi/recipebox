@@ -1,0 +1,458 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #243447;
+  background: #e9eef3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #e9eef3 0%, #dfe7ef 100%);
+  color: #243447;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.hero-card,
+.panel-card,
+.sub-card,
+.modal-card {
+  background: #f6f8fb;
+  border-radius: 28px;
+  box-shadow: 0 8px 24px rgba(36, 52, 71, 0.08);
+}
+
+.hero-card {
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand-row h1,
+.panel-title-row h2,
+.detail-head h2,
+.sub-card h3,
+.modal-header h3 {
+  margin: 0;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #dbe5ef;
+  color: #5e7893;
+}
+
+.content-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 340px 1fr;
+}
+
+.sidebar-card,
+.detail-card {
+  padding: 20px;
+}
+
+.panel-title-row,
+.detail-head,
+.modal-header,
+.modal-footer,
+.recipe-list-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel-title-row,
+.recipe-list-title-row {
+  align-items: center;
+}
+
+.search-wrap {
+  position: relative;
+  margin-top: 12px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5e7288;
+}
+
+.search-wrap input,
+.form-grid input,
+.form-grid textarea,
+.form-grid select,
+.modal-textarea {
+  width: 100%;
+  border: 1px solid #c8d3df;
+  border-radius: 16px;
+  background: #fff;
+  color: #243447;
+  padding: 12px 14px;
+}
+
+.search-wrap input {
+  padding-left: 38px;
+}
+
+.form-grid textarea,
+.modal-textarea {
+  resize: vertical;
+}
+
+.tag-row,
+.button-row.wrap,
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-row {
+  margin-top: 16px;
+}
+
+.tag-button,
+.button,
+.recipe-list-item,
+.icon-button {
+  border: 1px solid #c8d3df;
+  background: #fff;
+  color: #243447;
+  transition: 0.18s ease;
+}
+
+.tag-button {
+  border-radius: 999px;
+  padding: 9px 12px;
+  font-size: 12px;
+}
+
+.tag-button.active {
+  background: #5e7893;
+  color: #fff;
+  border-color: #5e7893;
+}
+
+.recipe-list {
+  margin-top: 8px;
+  display: grid;
+  gap: 12px;
+  max-height: 70vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.recipe-list-item {
+  width: 100%;
+  text-align: left;
+  border-radius: 24px;
+  padding: 16px;
+}
+
+.recipe-list-item.selected {
+  background: #dbe5ef;
+  border-color: #738ca6;
+}
+
+.recipe-list-item h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.detail-head {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.muted-copy {
+  color: #5e7288;
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.cook-banner {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 24px;
+  border: 1px solid #c8d3df;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cook-banner-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.detail-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 20px;
+}
+
+.detail-grid.single {
+  grid-template-columns: 1fr;
+}
+
+.sub-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #c8d3df;
+  box-shadow: none;
+}
+
+.sub-card h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.ingredient-list,
+.method-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredient-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ingredient-list.large,
+.large-step {
+  font-size: 20px;
+}
+
+.ingredient-list li,
+.method-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.method-list {
+  display: grid;
+  gap: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-top: 9px;
+  flex: 0 0 auto;
+  background: #738ca6;
+}
+
+.step-toggle,
+.icon-button {
+  border-radius: 14px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.notes-card {
+  margin-top: 20px;
+}
+
+.button {
+  border-radius: 18px;
+  padding: 11px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.button-primary {
+  background: #5e7893;
+  border-color: #5e7893;
+  color: #fff;
+}
+
+.button-secondary {
+  background: #fff;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.empty-state {
+  border: 1px solid #c8d3df;
+  border-radius: 24px;
+  background: #fff;
+  padding: 18px;
+  color: #5e7288;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 52, 71, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 50;
+}
+
+.modal-card {
+  width: min(100%, 780px);
+  max-height: 88vh;
+  overflow: auto;
+  padding: 20px;
+}
+
+.modal-header {
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.modal-header p,
+.status-copy,
+.error-copy {
+  margin: 6px 0 0;
+  color: #5e7288;
+}
+
+.error-copy {
+  color: #a14b5c;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  gap: 16px;
+}
+
+.two-up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-grid label {
+  display: grid;
+  gap: 8px;
+}
+
+.form-grid span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal-textarea {
+  min-height: 260px;
+}
+
+.progress-stack {
+  display: grid;
+  gap: 8px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dbe5ef;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #5e7893;
+}
+
+.cook-title {
+  font-size: 32px;
+}
+
+@media (max-width: 900px) {
+  .content-grid,
+  .detail-grid,
+  .detail-grid.single,
+  .two-up,
+  .three-up {
+    grid-template-columns: 1fr;
+  }
+
+  .page-wrap {
+    padding: 12px;
+  }
+
+  .sidebar-card,
+  .detail-card,
+  .hero-card,
+  .modal-card,
+  .sub-card {
+    border-radius: 24px;
+  }
+}
